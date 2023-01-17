@@ -1,0 +1,20 @@
+<template>
+   <lightning-card>
+       <h3 slot="title">
+           <lightning-icon icon-name="standard:contact" size="small"></lightning-icon>
+           Contact Creation
+       </h3>
+       <div slot="footer">
+           <lightning-button label="Create Contact" onclick={handleSaveContact} variant="brand"></lightning-button>
+           <lightning-badge label={contactid}></lightning-badge>
+           <lightning-badge label={error}></lightning-badge>
+       </div>
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Enter Contact First Name" value={contactRecord.CONTACT_FIRSTNAME} onchange={handleFNameChange}></lightning-input>
+        <lightning-input type="text" label="Enter Contact Last Name" value={contactRecord.CONTACT_LASTNAME} onchange={handleLNameChange}></lightning-input>
+        <lightning-input type="email" label="Enter Contact Email address" value={contactRecord.CONTACT_EMAIL} onchange={handleEmailChange}></lightning-input>
+        <lightning-input type="text" label="Enter Contact Phone Number" value={contactRecord.CONTACT_PHONE} onchange={handlePhoneChange}></lightning-input>
+        <lightning-input type="text" label="Enter Contact Fax" value={contactRecord.CONTACT_FAX} onchange={handleFaxChange}></lightning-input>
+       </p>
+   </lightning-card>
+</template>
